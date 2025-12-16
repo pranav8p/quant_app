@@ -60,6 +60,38 @@ gamescap/
 
 ---
 
+## System Architecture
+
+### Architecture Diagram
+
+![System Architecture](architecture_diagram.png)
+
+### Architecture Description
+
+The system follows a modular pipeline architecture:
+
+1. **Data Ingestion**
+   - Live tick data is received from Binance using a WebSocket connection.
+
+2. **Storage Layer**
+   - Incoming tick data is stored in a local SQLite database for persistence.
+
+3. **Resampling Engine**
+   - Stored tick data is aggregated into OHLC bars across multiple timeframes (1s, 5min, 10min).
+
+4. **Analytics Engine**
+   - Computes statistical analytics including spread, Z-score, rolling correlation, and mean-reversion backtesting.
+   - Applies liquidity filtering to avoid unreliable signals.
+
+5. **Alert Engine**
+   - Generates rule-based alerts based on Z-score thresholds, liquidity conditions, and correlation strength.
+
+6. **Frontend Dashboard**
+   - Displays live metrics, charts, alerts, and tables using Streamlit.
+   - Allows CSV export of analytics data.
+
+---
+
 ## System Flow
 
 1. Market tick data is received via WebSocket
