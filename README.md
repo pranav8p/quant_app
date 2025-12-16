@@ -64,7 +64,8 @@ gamescap/
 
 ### Architecture Diagram
 
-![System Architecture](architecture_diagram.png)
+![System Architecture](<img width="1892" height="612" alt="architecture_diagram" src="https://github.com/user-attachments/assets/dbcaecc2-d9b4-4a4d-bd4d-07bdab9f9262" />
+)
 
 
 
