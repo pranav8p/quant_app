@@ -181,7 +181,7 @@ The dashboard displays:
 
 ## ChatGPT Usage Disclosure
 
-ChatGPT was used as a development assistant to help with debugging, structuring code modules, and drafting documentation. All code was manually reviewed, tested, and integrated by the developer.
+ChatGPT was used as a development assistant to help with debugging, structuring code modules, and drafting documentation. All code was manually reviewed, tested, and integrated.
 
 ---
 
