@@ -1,20 +1,16 @@
-
-### ✅ **FINAL `README.md` (USE THIS)**
-
-```markdown
 # Real-Time Quant Analytics Dashboard
 
 ## Project Description
 
-This project implements a real-time quantitative analytics system for monitoring statistical signals on live cryptocurrency market data. The system ingests tick-level data, aggregates it into multiple timeframes, computes statistical indicators, and visualizes the results through an interactive dashboard.
+This project implements a real-time quantitative analytics system for monitoring statistical signals on live cryptocurrency market data. The system ingests tick-level data, stores it locally, resamples it into multiple timeframes, computes statistical indicators, and visualizes the results using an interactive dashboard.
 
-The focus of this project is to demonstrate data ingestion, time-series resampling, statistical analysis, alerting, and visualization in a unified pipeline.
+The project is intended for educational and evaluation purposes and demonstrates end-to-end data ingestion, analytics, alerting, and visualization.
 
 ---
 
 ## Features
 
-- Live market data ingestion using Binance WebSocket
+- Live cryptocurrency market data ingestion using Binance WebSocket
 - Tick data storage using SQLite
 - OHLC bar generation for multiple timeframes
 - Spread and Z-score computation
@@ -66,12 +62,12 @@ gamescap/
 
 ## System Flow
 
-1. Market ticks are received via WebSocket
+1. Market tick data is received via WebSocket
 2. Tick data is stored in a local SQLite database
 3. Stored data is resampled into OHLC bars
 4. Statistical analytics are computed on resampled data
-5. Alerts are generated based on predefined rules
-6. Results are displayed on a live dashboard
+5. Alerts are generated using predefined rules
+6. Results are displayed in a live dashboard
 
 ---
 
@@ -85,13 +81,13 @@ python -m venv quant-env
 
 Activate the environment:
 
-* Windows:
+**Windows**
 
 ```bash
 quant-env\Scripts\activate
 ```
 
-* Linux / macOS:
+**Linux / macOS**
 
 ```bash
 source quant-env/bin/activate
@@ -117,8 +113,8 @@ python app.py
 
 This starts:
 
-* WebSocket ingestion
-* Data storage
+* WebSocket data ingestion
+* Tick storage
 * Analytics computation
 * Terminal-based alerts
 
@@ -126,7 +122,7 @@ This starts:
 
 ### Start Frontend
 
-In a separate terminal:
+Open a new terminal and run:
 
 ```bash
 streamlit run frontend.py
@@ -141,31 +137,27 @@ The dashboard updates automatically at regular intervals.
 The dashboard displays:
 
 * Latest price metrics
-* Z-score and correlation values
-* Trade count and PnL from backtest logic
-* Time-series plots for price, spread, and Z-score
+* Z-score and rolling correlation values
+* Trade count and PnL from backtesting logic
+* Time-series charts for price, spread, and Z-score
 * Recent OHLC data table
-* CSV download option
+* CSV download option for analytics output
 
 ---
 
 ## ChatGPT Usage Disclosure
 
-ChatGPT was used as a development assistant to help with debugging, code structuring, and documentation drafting. All code was reviewed, tested, and integrated manually.
+ChatGPT was used as a development assistant to help with debugging, structuring code modules, and drafting documentation. All code was manually reviewed, tested, and integrated by the developer.
 
 ---
 
 ## Notes
 
-* For demonstration purposes, a lagged version of the same asset is used to illustrate spread-based analytics.
-* The project is designed for educational and evaluation purposes.
+* For demonstration purposes, a lagged version of the same asset is used to illustrate spread-based statistical analysis.
+* The project is designed for learning and evaluation and is not intended for live trading.
 
 ---
 
 ## Conclusion
 
 This project demonstrates a complete pipeline for real-time data ingestion, statistical analysis, alerting, and visualization using Python.
-
-```
-
-
